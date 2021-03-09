@@ -32,22 +32,22 @@ We prepared the data, performed exploratory data analysis, and evaluate 6 regres
 * Regression models are commonly used for market forecasting, predicting future revenue; and, in our data set, to make predictions on an output value given a new input.  Of the many ways to include numerous features, we processed the data and narrowed our features to 12.
 * Initially, we compared the performance of four machine learning regression models we covered from Sklearn’s libraries.  Consistent with sklearn libraries generally, we define the model object, fit the model to the data, then made predictions and evaluated the model.
 ![mlrPlot](output/mlr_plot.JPG)
-![mlrResidual](output/mlr_residual_plot.jpg)
-![mlrScores](output/mlr_scores.jpg)
+![mlrResidual](output/mlr_residual_plot.JPG)
+![mlrScores](output/mlr_scores.JPG)
 * Multiple linear regression utilized the model.score method to evaluate and contrast models & residual plots where available; included for all is a sample plot for the first 25 predicted vs actual values, which visually represents the overall model score.
-![ridgePlot](output/ridge_plot.jpg)
-![ridgeResidual](output/ridge_residual_plot.jpg)
-![ridgeScores](output/ridge_scores.jpg)
+![ridgePlot](output/ridge_plot.JPG)
+![ridgeResidual](output/ridge_residual_plot.JPG)
+![ridgeScores](output/ridge_scores.JPG)
 * Overall, model scores were very similar. 
-![elasticnetPlot](output/elasticnet_plot.jpg)
-![elasticnetScores](output/elasticnet_scores.jpg)
-![lassoPlot](output/lasso_plot.jpg)
-![lassoScores](output/lasso_scores.jpg)
+![elasticnetPlot](output/elasticnet_plot.JPG)
+![elasticnetScores](output/elasticnet_scores.JPG)
+![lassoPlot](output/lasso_plot.JPG)
+![lassoScores](output/lasso_scores.JPG)
 * The models answer our central questions: to analyze and predict sales.  86% of the variation in sales can be explained by the independent variables (features used) in a Linear, Lasso, Ridge, or ElasticNet regression model.
-![sgdPlot](output/sgd_plot.jpg)
-![sgdScores](output/sgd_scores.jpg)
+![sgdPlot](output/sgd_plot.JPG)
+![sgdScores](output/sgd_scores.JPG)
 * We also looked at the performance of the SGD (stochastic gradient descent) regressor model.  StandardScaler was used to scale the dataset, and we found the model score remained relatively the same.
-![lgbmPlot](output/lgbm_plot.jpg)
-![lgbmScores](output/lgbm_scores.jpg)
+![lgbmPlot](output/lgbm_plot.JPG)
+![lgbmScores](output/lgbm_scores.JPG)
 * Exploring different ways that other analysts’ work have utilized regression models to predict future sales, we focused on a machine learning framework originally developed by Microsoft LightGBM (Light Gradient Boosting Machine). This model was evaluated to have the best r2 value, at 98% vs 86%, the highest accuracy of all the models tested.
 * Regardless of the model utilized to make predictions, given a set of twelve featured data points we can use model.predict() to predict sales.
