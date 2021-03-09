@@ -31,7 +31,7 @@ We prepared the data, performed exploratory data analysis, and evaluate 6 regres
 ### Machine Learning Models
 * Regression models are commonly used for market forecasting, predicting future revenue; and, in our data set, to make predictions on an output value given a new input.  Of the many ways to include numerous features, we processed the data and narrowed our features to 12.
 * Initially, we compared the performance of four machine learning regression models we covered from Sklearn’s libraries.  Consistent with sklearn libraries generally, we define the model object, fit the model to the data, then made predictions and evaluated the model.
-![mlrPlot](output/mlr_plot.jpg)
+![mlrPlot](output/mlr_plot.JPG)
 ![mlrResidual](output/mlr_residual_plot.jpg)
 ![mlrScores](output/mlr_scores.jpg)
 * Multiple linear regression utilized the model.score method to evaluate and contrast models & residual plots where available; included for all is a sample plot for the first 25 predicted vs actual values, which visually represents the overall model score.
