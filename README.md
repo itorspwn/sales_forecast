@@ -4,7 +4,7 @@ Forecast sales using store, promotion, and competitor data
 ## Summary:
 Rossmann operates over 3,000 drug stores in 7 European countries. Currently, Rossmann store managers are tasked with predicting their daily sales for up to six weeks in advance. Store sales are influenced by many factors, including promotions, competition, school and state holidays, seasonality, and locality. With thousands of individual managers predicting sales based on their unique circumstances, the accuracy of results can be quite varied.
 
-We prepared the data, performed exploratory data analysis, and evaluate 4 regression models.
+We prepared the data, performed exploratory data analysis, and evaluate 6 regression models.
 - - -
 ### Exploratory Data Analysis:
 ![outlier1](output/customers_outlier.png)
@@ -29,3 +29,25 @@ We prepared the data, performed exploratory data analysis, and evaluate 4 regres
 
 - - -
 ### Machine Learning Models
+* Regression models are commonly used for market forecasting, predicting future revenue; and, in our data set, to make predictions on an output value given a new input.  Of the many ways to include numerous features, we processed the data and narrowed our features to 12.
+* Initially, we compared the performance of four machine learning regression models we covered from Sklearn’s libraries.  Consistent with sklearn libraries generally, we define the model object, fit the model to the data, then made predictions and evaluated the model.
+![mlrPlot](output/mlr_plot.jpg)
+![mlrResidual](output/mlr_residual_plot.jpg)
+![mlrScores](output/mlr_scores.jpg)
+* Multiple linear regression utilized the model.score method to evaluate and contrast models & residual plots where available; included for all is a sample plot for the first 25 predicted vs actual values, which visually represents the overall model score.
+![ridgePlot](output/ridge_plot.jpg)
+![ridgeResidual](output/ridge_residual_plot.jpg)
+![ridgeScores](output/ridge_scores.jpg)
+* Overall, model scores were very similar. 
+![elasticnetPlot](output/elasticnet_plot.jpg)
+![elasticnetScores](output/elasticnet_scores.jpg)
+![lassoPlot](output/lasso_plot.jpg)
+![lassoScores](output/lasso_scores.jpg)
+* The models answer our central questions: to analyze and predict sales.  86% of the variation in sales can be explained by the independent variables (features used) in a Linear, Lasso, Ridge, or ElasticNet regression model.
+![sgdPlot](output/sgd_plot.jpg)
+![sgdScores](output/sgd_scores.jpg)
+* We also looked at the performance of the SGD (stochastic gradient descent) regressor model.  StandardScaler was used to scale the dataset, and we found the model score remained relatively the same.
+![lgbmPlot](output/lgbm_plot.jpg)
+![lgbmScores](output/lgbm_scores.jpg)
+* Exploring different ways that other analysts’ work have utilized regression models to predict future sales, we focused on a machine learning framework originally developed by Microsoft LightGBM (Light Gradient Boosting Machine). This model was evaluated to have the best r2 value, at 98% vs 86%, the highest accuracy of all the models tested.
+* Regardless of the model utilized to make predictions, given a set of twelve featured data points we can use model.predict() to predict sales.
